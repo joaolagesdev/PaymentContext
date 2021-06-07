@@ -100,3 +100,4 @@ C:\Users\HP\Documents\Projetos\PaymentContext\PaymentContext.Tests\bin\Debug\net
 C:\Users\HP\Documents\Projetos\PaymentContext\PaymentContext.Tests\bin\Debug\net5.0\PaymentContext.Shared.dll
 C:\Users\HP\Documents\Projetos\PaymentContext\PaymentContext.Tests\bin\Debug\net5.0\PaymentContext.Shared.pdb
 C:\Users\HP\Documents\Projetos\PaymentContext\PaymentContext.Tests\bin\Debug\net5.0\PaymentContext.Domain.pdb
+C:\Users\HP\Documents\Projetos\PaymentContext\PaymentContext.Tests\bin\Debug\net5.0\Flunt.dll
