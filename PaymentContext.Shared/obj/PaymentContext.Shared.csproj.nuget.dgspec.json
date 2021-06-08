@@ -45,7 +45,7 @@
           "dependencies": {
             "Flunt": {
               "target": "Package",
-              "version": "[2.0.3, )"
+              "version": "[1.0.2, )"
             }
           },
           "imports": [

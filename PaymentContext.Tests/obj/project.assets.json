@@ -8,13 +8,16 @@
           "build/netstandard1.0/coverlet.collector.targets": {}
         }
       },
-      "Flunt/2.0.3": {
+      "Flunt/1.0.2": {
         "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
         "compile": {
-          "lib/netstandard2.0/Flunt.dll": {}
+          "lib/netstandard1.3/Flunt.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Flunt.dll": {}
+          "lib/netstandard1.3/Flunt.dll": {}
         }
       },
       "Microsoft.CodeCoverage/16.7.1": {
@@ -1648,7 +1651,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Flunt": "2.0.3",
+          "Flunt": "1.0.2",
           "PaymentContext.Shared": "1.0.0"
         },
         "compile": {
@@ -1662,7 +1665,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Flunt": "2.0.3"
+          "Flunt": "1.0.2"
         },
         "compile": {
           "bin/placeholder/PaymentContext.Shared.dll": {}
@@ -1706,17 +1709,16 @@
         "coverlet.collector.nuspec"
       ]
     },
-    "Flunt/2.0.3": {
-      "sha512": "0AEzlD5GM7b9aNn+CjSU9T9dney9ZqIlmvBa5pmLjx5sxVH4MEv2f7yKNVLmpQ6mGgTl3vQHDwqWZEL0+sRb1A==",
+    "Flunt/1.0.2": {
+      "sha512": "HtQBErf6cJewdP7LzLJEyehePdPKP4ieYoQP8DpiXB6qs1TeuHVF38Bw8TZzz9t7r2j+SWFRoMsU5oJvzSOeBg==",
       "type": "package",
-      "path": "flunt/2.0.3",
+      "path": "flunt/1.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "flunt.2.0.3.nupkg.sha512",
+        "flunt.1.0.2.nupkg.sha512",
         "flunt.nuspec",
-        "icon.png",
-        "lib/netstandard2.0/Flunt.dll"
+        "lib/netstandard1.3/Flunt.dll"
       ]
     },
     "Microsoft.CodeCoverage/16.7.1": {
@@ -5769,6 +5771,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Flunt >= 1.0.2",
       "MSTest.TestAdapter >= 2.1.1",
       "MSTest.TestFramework >= 2.1.1",
       "Microsoft.NET.Test.Sdk >= 16.7.1",
@@ -5826,6 +5829,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Flunt": {
+            "target": "Package",
+            "version": "[1.0.2, )"
+          },
           "MSTest.TestAdapter": {
             "target": "Package",
             "version": "[2.1.1, )"
