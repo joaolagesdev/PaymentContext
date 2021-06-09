@@ -27,6 +27,7 @@ namespace PaymentContext.Domain.Entities
 
         public void AddSubscription(Subscription subscription)
         {
+    
             var hasSubscriptionActive = false;
 
             foreach(var sub in _subscriptions) {
@@ -34,13 +35,15 @@ namespace PaymentContext.Domain.Entities
                     hasSubscriptionActive = true;
             }
 
-            /* AddNotifications(new Contract()
+            AddNotifications(new Contract()
                 .Requires()
-                .IsFalse(hasSubscriptionActive, "Student.Subscriptions", "O usuário já possui uma assinatura ativa")); */
+                .IsFalse(hasSubscriptionActive, "Student.Subscriptions", "O usuário já possui uma assinatura ativa")
+                .AreEquals(0, subscription.Payments.Count, "Student.Subscription.Payments", "Esta assinatura não possui pagamentos")
+            );
 
             // Alternativa
-            if(hasSubscriptionActive)
-                AddNotification("Student.Subscriptions", "O usuário já possui uma assinatura ativa"); 
+            // if(hasSubscriptionActive)
+            //     AddNotification("Student.Subscriptions", "O usuário já possui uma assinatura ativa"); 
         }
     }
 }
