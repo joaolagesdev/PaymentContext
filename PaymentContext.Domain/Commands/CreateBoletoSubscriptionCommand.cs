@@ -36,6 +36,8 @@ namespace PaymentContext.Domain.Commands
         public string ZipCode { get; set; }
 
         // Se aplicar aqui não há necessidade de aplicar no valueObjects
+        // Recebe as informações do JSON de entrada, se não estiver válido nem prossegue com a requisição
+        // Informações barradas antes de chegar no domínio
         public void Validate()
         {
             AddNotifications( new Contract()
